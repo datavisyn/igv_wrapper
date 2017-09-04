@@ -17,6 +17,9 @@
   },
   "main": "./index.js",
   "typings": "./typings/index.d.ts",
+  "scripts": {
+    "build": "cat _header.js lib/*.min.js _footer.js > index.js"
+  },
   "files": [
     "lib",
     "typings",
