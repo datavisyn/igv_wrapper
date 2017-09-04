@@ -1,56 +1,53 @@
-lineupengine [![Phovea][phovea-image]][phovea-url] [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-=====================
+igv.js Wrapper
+==============
 
+This is an UMD compatible wrapper around [igv.js](https://github.com/igvteam/igv.js) with additional TypeScript typings. 
 
 
 Installation
 ------------
 
 ```
-git clone https://github.com/sgratzl/lineupengine.git
-cd lineupengine
-npm install
+npm install github:datavisyn/igv_wrapper
 ```
 
-Testing
--------
+Usage 
+------------
+```TypeScript
+import 'font-awesome/scss/font-awesome.scss';
+import 'jquery-ui-dist/jquery-ui';
+import 'jquery-ui-dist/jquery-ui.css';
+import './lib/igv-1.0.9.css';
+
+import * as igv from 'igv_wrapper';
+
+const options: igv.IIGVBrowserOptions = {
+  palette: ['#00A0B0', '#6A4A3C', '#CC333F', '#EB6841'],
+  locus: '7:55,085,725-55,276,031',
+
+  reference: {
+    id: 'hg19',
+    fastaURL: '//igv.broadinstitute.org/genomes/seq/1kg_v37/human_g1k_v37_decoy.fasta',
+    cytobandURL: '//igv.broadinstitute.org/genomes/seq/b37/b37_cytoband.txt'
+  },
+
+  trackDefaults: {
+    bam: {
+      coverageThreshold: 0.2,
+      coverageQualityWeight: true
+    }
+  },
+
+  tracks: [
+    {
+      name: 'Genes',
+      url: '//igv.broadinstitute.org/annotations/hg19/genes/gencode.v18.collapsed.bed',
+      indexURL: '//igv.broadinstitute.org/annotations/hg19/genes/gencode.v18.collapsed.bed.idx',
+      displayMode: 'EXPANDED'
+    }
+  ]
+}
+
+const browser: igv.IGVBrowser = igv.createBrowser(document.querySelector('div'), options);
 
 ```
-npm test
-```
-
-Building
---------
-
-```
-npm run build
-```
-
-Notes
------
-
-```
-firefox max DOM height: 17.800.000px < 17899999px
-edge max DOM height: 10000000px < 1099999px
-
-scrollHeight
-chrome:  33.554.431px translate + height
-firefox: 17.895.566px marginTop + height
-edge:    3.033.917px height
-```
-
-
-***
-
-<a href="https://caleydo.org"><img src="http://caleydo.org/assets/images/logos/caleydo.svg" align="left" width="200px" hspace="10" vspace="6"></a>
-This repository is part of **[Phovea](http://phovea.caleydo.org/)**, a platform for developing web-based visualization applications. For tutorials, API docs, and more information about the build and deployment process, see the [documentation page](http://phovea.caleydo.org).
-
-
-[phovea-image]: https://img.shields.io/badge/Phovea-Client%20Plugin-F47D20.svg
-[phovea-url]: https://phovea.caleydo.org
-[npm-image]: https://badge.fury.io/js/lineupengine.svg
-[npm-url]: https://npmjs.org/package/lineupengine
-[travis-image]: https://travis-ci.org/sgratzl/lineupengine.svg?branch=master
-[travis-url]: https://travis-ci.org/sgratzl/lineupengine
-[daviddm-image]: https://david-dm.org/sgratzl/lineupengine/status.svg
-[daviddm-url]: https://david-dm.org/sgratzl/lineupengine
