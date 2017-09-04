@@ -3,11 +3,11 @@
   "description": "",
   "version": "1.0.9",
   "author": {
-    "name": "Samuel Gratzl",
-    "email": "samuel_gratzl@gmx.at",
-    "url": ""
+    "name": "Datavisyn",
+    "email": "samuel.gratzl@datavisyn.io",
+    "url": "http://datavisyn.io"
   },
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/datavisyn/igv_wrapper/issues"
   },
