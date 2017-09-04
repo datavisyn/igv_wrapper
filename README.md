@@ -1,73 +1,56 @@
-LineUp.js: Visual Analysis of Multi-Attribute Rankings [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-======================================================
+lineupengine [![Phovea][phovea-image]][phovea-url] [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+=====================
 
-LineUp is an interactive technique designed to create, visualize and explore rankings of items based on a set of heterogeneous attributes. 
-This is a D3-based re-implementation with limited functionality relative to the original stand-alone LineUp, which you can check out at http://lineup.caleydo.org
 
-Dependencies
+
+Installation
 ------------
 
-LineUp.js depends on [D3](http://d3js.org) for rendering and [FontAwesome](http://fontawesome.io/) for icons in the toolbar. Both dependencies are declared as bower dependencies. 
-
-Development Dependencies
-------------------------
-
-[Webpack](http://webpack.github.io) is used as build tool. LineUp itself is written in [TypeScript](www.typescriptlang.org) and [SASS](http://sass-lang.com). 
-
-### Development Environment
-
-**Installation**
-
-```bash
+```
+git clone https://github.com/sgratzl/lineupengine.git
+cd lineupengine
 npm install
 ```
 
+Testing
+-------
 
-**Test**
-
-```bash
+```
 npm test
 ```
 
-**Build distribution packages**
+Building
+--------
 
-```bash
+```
 npm run build
 ```
 
+Notes
+-----
 
-**Watch file changes**
+```
+firefox max DOM height: 17.800.000px < 17899999px
+edge max DOM height: 10000000px < 1099999px
 
-```bash
-npm run watch
+scrollHeight
+chrome:  33.554.431px translate + height
+firefox: 17.895.566px marginTop + height
+edge:    3.033.917px height
 ```
 
-The compiled JavaScript files are located under _build_ and the TypeScript documentation is located under _build_/_docs_.
 
-DOM Structure
--------------
+***
 
-The DOM elements are composed of three parts: header, body, and pool. 
-The header and pool are using HTML5 and the body SVG. However, the body could be rewritten to using HTML, too. 
-The body is using a mix of row and column based approach. Rows are used for the background alteration and for hovering over rows. 
-Column groups are used for efficient use of D3 for rendering individual columns. Individual columns require different rendering strategies. 
-
-Data Model
-----------
-
-![Data Model](media/data_model.png)
-
-Documentation
--------------
-
-[TypeDoc Docu](http://lineup-releases.s3-website.eu-central-1.amazonaws.com/latest/docs/)
+<a href="https://caleydo.org"><img src="http://caleydo.org/assets/images/logos/caleydo.svg" align="left" width="200px" hspace="10" vspace="6"></a>
+This repository is part of **[Phovea](http://phovea.caleydo.org/)**, a platform for developing web-based visualization applications. For tutorials, API docs, and more information about the build and deployment process, see the [documentation page](http://phovea.caleydo.org).
 
 
-[npm-image]: https://badge.fury.io/js/lineupjs.svg
-[npm-url]: https://npmjs.org/package/lineupjs
-[travis-image]: https://travis-ci.org/Caleydo/lineupjs.svg?branch=master
-[travis-url]: https://travis-ci.org/Caleydo/lineupjs.svg?branch=master
-[daviddm-image]: https://david-dm.org/Caleydo/lineupjs/status.svg
-[daviddm-url]: https://david-dm.org/Caleydo/lineupjs
-
-
+[phovea-image]: https://img.shields.io/badge/Phovea-Client%20Plugin-F47D20.svg
+[phovea-url]: https://phovea.caleydo.org
+[npm-image]: https://badge.fury.io/js/lineupengine.svg
+[npm-url]: https://npmjs.org/package/lineupengine
+[travis-image]: https://travis-ci.org/sgratzl/lineupengine.svg?branch=master
+[travis-url]: https://travis-ci.org/sgratzl/lineupengine
+[daviddm-image]: https://david-dm.org/sgratzl/lineupengine/status.svg
+[daviddm-url]: https://david-dm.org/sgratzl/lineupengine
