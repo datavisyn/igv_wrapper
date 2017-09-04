@@ -1,4 +1,4 @@
-export interface IBrowserOptions {
+export interface IIGVBrowserOptions {
   /**
    *  Zoom-in is clamped to this value
    *  @default 40
@@ -27,11 +27,11 @@ export interface IBrowserOptions {
    * Array of configuration objects defining tracks initially displayed when app launches.
    * @default []
    */
-  tracks: ITrack[];
+  tracks?: ITrack[];
   /**
    *  Embedded object defining default settings for specific track types (see table below).
    */
-  trackDefaults: ITrackDefaults;
+  trackDefaults?: ITrackDefaults;
   /**
    * Initial genomic location
    */
@@ -134,15 +134,15 @@ export interface ISearch {
 
 export interface ITrackDefaults {
   bam: {
-    converageThreshold: number;
-    coverageQualityWeight: boolean;
+    coverageThreshold?: number;
+    coverageQualityWeight?: boolean;
     [key: string]: any;
   };
 
   [key: string]: any;
 }
 
-export interface IBrowser {
+export interface IGVBrowser {
   loadTrack(config: ITrack): void;
 
   /**
@@ -209,17 +209,17 @@ export interface ICommonTrack {
    * If true, then track height is adjusted dynamically, within the bounds set by minHeight and maxHeight, to accomdodate features in view
    * @default true;
    */
-  autoHeight: boolean;
+  autoHeight?: boolean;
   /**
    * Minimum height of track in pixels  50
    * @default 50
    */
-  minHeight: number;
+  minHeight?: number;
   /**
    * Maximum height of track in pixels
    * @default 500
    */
-  maxHeight: number;
+  maxHeight?: number;
   /**
    * Maximum window size in base pairs for which indexed annotations or variants are displayed  1 MB for variants, 30 KB for alignments, whole chromosome for other track types
    */
@@ -227,7 +227,7 @@ export interface ICommonTrack {
 }
 
 export interface IAnnotationTrack extends ICommonTrack {
-  type: 'annotation';
+  type?: 'annotation';
   /**
    * Annotation display mode, one of "COLLAPSED", "EXPANDED", "SQUISHED"  "COLLAPSED"
    * @default COLLAPSED
@@ -262,7 +262,7 @@ export interface IAnnotationTrack extends ICommonTrack {
 }
 
 export interface IWigTrack extends ICommonTrack {
-  type: 'wig';
+  type?: 'wig';
   /**
    * Autoscale track to maximum value in view
    */
@@ -280,7 +280,7 @@ export interface IWigTrack extends ICommonTrack {
 }
 
 export interface IAlignmentTrack extends ICommonTrack {
-  type: 'alignment';
+  type?: 'alignment';
   /**
    * If true, paired reads are drawn as a single alignment.
    * @default false
@@ -437,12 +437,12 @@ export interface IGA4GHVariantTrack extends IVariantTrack {
 }
 
 export interface ISegmentTrack extends ICommonTrack {
-  type: 'seg';
+  type?: 'seg';
 }
 
 export declare type ITrack = IAlignmentTrack|IVariantTrack|IAnnotationTrack|IGA4GHAlignemntTrack|IGA4GHVariantTrack|IWigTrack|ISegmentTrack;
 
 
-export declare function createBrowser(div: HTMLElement, options: Partial<IBrowserOptions>): IBrowser;
+export declare function createBrowser(div: HTMLElement, options: IIGVBrowserOptions): IGVBrowser;
 
-export declare const browser: IBrowser;
+export declare const browser: IGVBrowser;
