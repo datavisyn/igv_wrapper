@@ -1,0 +1,12 @@
+/.tscache
+/.idea
+/build
+/tmp
+/dist
+/.bower.json
+/tscommand*.tmp.txt
+*.log
+*.map
+src/**/*.js
+src/**/*.css
+/node_modules/
