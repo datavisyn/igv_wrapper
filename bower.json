@@ -1,0 +1,36 @@
+{
+  "name": "igv_wraper",
+  "version": "1.0.9",
+  "homepage": "https://github.com/datavisyn/igv_wrapper",
+  "authors": [
+    "Samuel Gratzl <samuel.gratzl@datavisyn.io> (http://datavisyn.io)",
+    "IGV Team"
+  ],
+  "description": "This is an UMD compatible wrapper around [igv.js](https://github.com/igvteam/igv.js) with additional TypeScript typings.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/datavisyn/igv_wrapper.git"
+  },
+  "main": [
+    "index.js"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "igv",
+    "genome-viewer",
+    "datavisyn"
+  ],
+  "dependencies": {
+    "font-awesome": ">=4.6.0",
+    "jquery": ">=3.1.1",
+    "jquery-ui": "^=1.12.1"
+  },
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "_*"
+  ]
+}
