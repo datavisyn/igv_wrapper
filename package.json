@@ -15,20 +15,13 @@
     "type": "git",
     "url": "https://github.com/datavisyn/igv_wrapper.git"
   },
-  "main": "./index.js",
+  "main": "./lib/igv-beta.js",
   "typings": "./typings/index.d.ts",
-  "scripts": {
-    "build": "cat _header.js lib/*.min.js _footer.js > index.js"
-  },
   "files": [
     "lib",
-    "typings",
-    "index.js",
-    "deps.js"
+    "typings"
   ],
   "dependencies": {
-    "font-awesome": "^4",
-    "jquery": "3.1.1",
-    "jquery-ui-dist": "^1.12.1"
+    "font-awesome": "^4"
   }
 }
