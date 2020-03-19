@@ -12,7 +12,7 @@
         module.exports = factory(require('jquery'));
     } else {
         // Browser globals (root is window)
-        root.ivg = factory(root.jQuery);
+        root.igv = factory(root.jQuery);
   }
 }(this, function (jQuery) {
    var windowBak = window.jQuery;
