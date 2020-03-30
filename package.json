@@ -18,7 +18,9 @@
   "main": "./index.js",
   "typings": "./typings/index.d.ts",
   "scripts": {
-    "build": "cat _header.js lib/*.min.js _footer.js > index.js"
+    "build": "cat _header.js lib/*.min.js _footer.js > index.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "files": [
     "lib",
