@@ -1,7 +1,7 @@
 {
   "name": "igv_wrapper",
   "description": "This is an UMD compatible wrapper around [igv.js](https://github.com/igvteam/igv.js) with additional TypeScript typings.",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "author": {
     "name": "Datavisyn",
     "email": "samuel.gratzl@datavisyn.io",
@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "font-awesome": "^4",
-    "jquery": "~3.3.1",
+    "jquery": "~3.4.1",
     "jquery-ui-dist": "^1.12.1"
   },
   "devDependencies": {
