@@ -3,9 +3,9 @@
   "description": "This is an UMD compatible wrapper around [igv.js](https://github.com/igvteam/igv.js) with additional TypeScript typings.",
   "version": "1.2.1-SNAPSHOT",
   "author": {
-    "name": "Datavisyn",
-    "email": "samuel.gratzl@datavisyn.io",
-    "url": "http://datavisyn.io"
+    "name": "datavisyn",
+    "email": "contact@datavisyn.io",
+    "url": "https://datavisyn.io"
   },
   "license": "MIT",
   "bugs": {
