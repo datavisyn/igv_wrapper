@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "font-awesome": "^4",
-    "jquery": "~3.4.1",
+    "jquery": "~3.5.0",
     "jquery-ui-dist": "^1.12.1"
   },
   "devDependencies": {
