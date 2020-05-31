@@ -1,5 +1,6 @@
 igv.js Wrapper
 ==============
+[![Target Discovery Platform][tdp-image]][tdp-url]
 
 This is an UMD compatible wrapper around [igv.js](https://github.com/igvteam/igv.js) with additional TypeScript typings. 
 
@@ -54,9 +55,9 @@ const browser: igv.IGVBrowser = igv.createBrowser(document.querySelector('div'),
 
 ***
 
-<a href="https://www.datavisyn.io"><img src="https://www.datavisyn.io/img/logos/datavisyn-d-logo.png" align="left" width="100px" hspace="10" vspace="6"></a>
+<a href="https://www.datavisyn.io"><img src="https://www.datavisyn.io/img/logos/datavisyn-logo.png" align="left" width="200px" hspace="10" vspace="6"></a>
 This repository is part of the **Target Discovery Platform** (TDP). For tutorials, API docs, and more information about the build and deployment process, see the [documentation page](https://wiki.datavisyn.io).
 
 
-[circleci-image]: https://circleci.com/gh/datavisyn/igv_wrapper.svg?style=shield
-[circleci-url]: https://circleci.com/gh/datavisyn/igv_wrapper
+[tdp-image]: https://img.shields.io/badge/Target%20Discovery%20Platform-Library-violet.svg 
+[tdp-url]: http://datavisyn.io
