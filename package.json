@@ -1,13 +1,14 @@
 {
   "name": "igv_wrapper",
   "description": "This is an UMD compatible wrapper around [igv.js](https://github.com/igvteam/igv.js) with additional TypeScript typings.",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "author": {
-    "name": "Datavisyn",
-    "email": "samuel.gratzl@datavisyn.io",
-    "url": "http://datavisyn.io"
+    "name": "datavisyn GmbH",
+    "email": "contact@datavisyn.io",
+    "url": "https://datavisyn.io"
   },
-  "license": "MIT",
+  "license": "BSD-3-Clause",
+  "homepage": "https://datavisyn.io",
   "bugs": {
     "url": "https://github.com/datavisyn/igv_wrapper/issues"
   },
@@ -30,14 +31,14 @@
   ],
   "dependencies": {
     "font-awesome": "^4",
-    "jquery": "~3.4.1",
+    "jquery": "~3.5.1",
     "jquery-ui-dist": "^1.12.1"
   },
   "devDependencies": {
-    "@types/jest": "25.1.4",
-    "jest": "25.1.0",
-    "identity-obj-proxy": "^3.0.0",
-    "ts-jest": "25.2.1",
-    "jest-raw-loader": "1.0.1"
+    "@types/jest": "~26.0.5",
+    "identity-obj-proxy": "~3.0.0",
+    "jest": "~26.1.0",
+    "jest-raw-loader": "~1.0.1",
+    "ts-jest": "~26.1.3"
   }
 }
