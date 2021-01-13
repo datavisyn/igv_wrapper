@@ -30,7 +30,6 @@
     "deps.js"
   ],
   "dependencies": {
-    "font-awesome": "^4",
     "jquery": "~3.5.1",
     "jquery-ui-dist": "^1.12.1"
   },
